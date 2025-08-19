@@ -53,8 +53,8 @@ variable "parent_id" {
 
 variable "role_name" {
   type        = string
-  description = "Name of IAM role to be created that is trusted from Main account. Defaults to AWSOrgAdmin"
-  default     = "AWSOrgAdmin"
+  description = "Name of IAM role to be created that is trusted from Main account. Defaults to OrganisationAdmin"
+  default     = "OrganisationAdmin"
 }
 
 variable "iam_user_access_to_billing" {
@@ -80,22 +80,4 @@ variable "github_repository_path" {
   type        = string
   description = "Needed if grant_github_access is true - GitHub Repository path to allow access to deploy into accounts. eg. org/repo"
   default     = ""
-}
-
-variable "enable_itoc_read_access" {
-  type        = bool
-  description = "Enable Itoc Read Only Access"
-  default     = false
-}
-
-variable "enable_itoc_write_access" {
-  type        = bool
-  description = "Enable Itoc Admin Access"
-  default     = false
-}
-
-variable "enable_itoc_managed_services_access" {
-  type        = bool
-  description = "Enable Itoc Managed Services Access"
-  default     = false
 }
