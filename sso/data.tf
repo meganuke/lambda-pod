@@ -26,6 +26,9 @@ locals {
 }
 
 data "aws_ssoadmin_instances" "this" {}
+output "sso_instances" {
+  value = data.aws_ssoadmin_instances.this.arns
+}
 
 data "aws_identitystore_group" "this" {
   for_each          = toset(local.sso_groups)
