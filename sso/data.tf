@@ -1,5 +1,5 @@
 locals {
-  ssoadmin_instance_arn = length(data.aws_ssoadmin_instances.this.arns) > 0 ? tolist(data.aws_ssoadmin_instances.this.arns)[0] : null
+  ssoadmin_instance_arn = tolist(data.aws_ssoadmin_instances.this.arns)[0]
 
   permission_sets = { for ps_name, ps_attrs in var.permission_sets : ps_name => ps_attrs }
 
