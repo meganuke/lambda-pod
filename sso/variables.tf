@@ -36,3 +36,8 @@ variable "groups" {
 
   default = {}
 }
+
+variable "aws_region" {
+  type        = string
+  description = "AWS Region to set up account for"
+}
