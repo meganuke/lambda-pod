@@ -25,7 +25,9 @@ locals {
   sso_groups = distinct([for assignment in var.account_assignments : assignment.sso_group_name])
 }
 
-data "aws_ssoadmin_instances" "this" {}
+data "aws_ssoadmin_instances" "this" {
+  provider = aws.member
+}
 output "sso_instances" {
   value = data.aws_ssoadmin_instances.this.arns
 }
