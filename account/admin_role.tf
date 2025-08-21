@@ -10,7 +10,7 @@ resource "aws_iam_role" "organisation_admin_role" {
         Principal = {
           AWS = compact(concat(
             ["arn:aws:iam::${aws_organizations_account.account.id}:root"],
-            aws_organizations_account.account.parent_id != null ? ["arn:aws:iam::${aws_organizations_account.account.parent_id}:root"] : []
+            var.master_account_id != null ? ["arn:aws:iam::${var.master_account_id}:root"] : []
           ))
         }
       }

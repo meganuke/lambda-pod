@@ -85,4 +85,5 @@ variable "github_repository_path" {
 variable "master_account_id" {
   type        = string
   description = "ID of the main account in the organization"
+  default     = null
 }
