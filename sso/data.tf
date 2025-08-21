@@ -24,7 +24,7 @@ locals {
 
   sso_groups = distinct([for assignment in var.account_assignments : assignment.sso_group_name])
 
-  main_account_admin_role = "arn:aws:iam::${aws_organizations_account.account.id}:role/${var.role_name}"
+  main_account_admin_role = "arn:aws:iam::${var.main_account_id}:role/${var.role_name}"
 }
 
 data "aws_ssoadmin_instances" "this" {

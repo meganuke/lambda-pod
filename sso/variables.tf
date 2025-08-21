@@ -47,3 +47,8 @@ variable "role_name" {
   description = "Name of IAM role to be created that is trusted from Main account. Defaults to OrganisationAdmin"
   default     = "OrganisationAdmin"
 }
+
+variable "main_account_id" {
+  type        = string
+  description = "Parent account id"
+}
