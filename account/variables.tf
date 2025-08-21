@@ -81,3 +81,8 @@ variable "github_repository_path" {
   description = "Needed if grant_github_access is true - GitHub Repository path to allow access to deploy into accounts. eg. org/repo"
   default     = ""
 }
+
+variable "master_account_id" {
+  type        = string
+  description = "ID of the main account in the organization"
+}
