@@ -41,8 +41,3 @@ variable "aws_region" {
   type        = string
   description = "AWS Region to set up account for"
 }
-
-variable "aws_profile" {
-  type        = string
-  description = "AWS Profile"
-}
