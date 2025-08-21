@@ -42,17 +42,6 @@ variable "aws_region" {
   description = "AWS Region to set up account for"
 }
 
-variable "role_name" {
-  type        = string
-  description = "Name of IAM role to be created that is trusted from Main account. Defaults to OrganisationAdmin"
-  default     = "OrganisationAdmin"
-}
-
-variable "main_account_id" {
-  type        = string
-  description = "Parent account id"
-}
-
 variable "aws_profile" {
   type        = string
   description = "AWS profile to use for credentials"
