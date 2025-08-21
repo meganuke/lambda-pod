@@ -52,3 +52,9 @@ variable "main_account_id" {
   type        = string
   description = "Parent account id"
 }
+
+variable "aws_profile" {
+  type        = string
+  description = "AWS profile to use for credentials"
+  default     = null
+}
