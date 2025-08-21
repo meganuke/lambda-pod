@@ -1,7 +1,7 @@
 provider "aws" {
   alias  = "member"
   region = var.aws_region
-  #assume_role {
-  #  role_arn     = local.account_org_admin_role
-  #}
+  assume_role {
+    role_arn     = local.main_account_admin_role
+  }
 }
