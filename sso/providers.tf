@@ -1,5 +1,7 @@
 provider "aws" {
   alias  = "member"
   region = var.aws_region
-  profile = "lambda_pod_main"
+  assume_role {
+    role_arn     = local.account_org_admin_role
+  }
 }
