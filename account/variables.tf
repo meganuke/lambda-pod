@@ -51,11 +51,11 @@ variable "parent_id" {
   description = "Parent AWS Org/OU for account to go under."
 }
 
-variable "role_name" {
-  type        = string
-  description = "Name of IAM role to be created that is trusted from Main account. Defaults to OrganisationAdmin"
-  default     = "OrganisationAdmin"
-}
+#variable "role_name" {
+#  type        = string
+#  description = "Name of IAM role to be created that is trusted from Main account. Defaults to OrganisationAdmin"
+#  default     = "OrganisationAdmin"
+#}
 
 variable "iam_user_access_to_billing" {
   type        = bool
