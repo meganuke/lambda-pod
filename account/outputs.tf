@@ -9,11 +9,6 @@ output "account_arn" {
   description = "The AWS Account ARN of the created account."
 }
 
-output "main_account_admin_role" {
-  value       = local.main_account_admin_role
-  description = "The AWS Account Org Admin IAM Role of the created account. This role trusts the main account and has administrator privileges."
-}
-
 output "account_email" {
   value       = aws_organizations_account.account.email
   description = "The AWS Account email of the created account."
